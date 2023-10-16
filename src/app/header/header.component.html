@@ -4,7 +4,7 @@
     </div>
 
     <div>
-        <button class="hamburger" id="hamburger-button">
+        <button class="hamburger" [class.is-active]="isHamburgerActive" (click)="toggleHamburger()">
             <div class="bar"></div>
         </button>
     </div>
