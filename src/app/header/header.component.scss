@@ -11,6 +11,8 @@
     left: 0;
     right: 0;
 
+    z-index: 1;
+
     img {
         height: 130px;
         width: auto;
@@ -54,56 +56,4 @@
 
 .hamburger.is-active .bar {
     opacity: 0;
-}
-
-// --------------- MEDIA QUERRYS --------------- //
-
-@media (max-width: 1280px) {
-    .wrapper{
-        max-width: 1000px !important;
-        margin: auto;
-    }
-}
-
-@media (max-width: 1050px) {
-    .wrapper{
-        max-width: 800px !important;
-        margin: auto;
-    }
-}
-
-
-@media (max-width: 880px) {
-    .wrapper{
-        max-width: 650px !important;
-        margin: auto;
-    }
-}
-
-@media (max-width: 730px) {
-    .wrapper{
-        max-width: 550px !important;
-        margin: auto;
-    }
-}
-
-@media (max-width: 580px) {
-    .wrapper{
-        max-width: 450px !important;
-        margin: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .wrapper{
-        max-width: 380px !important;
-        margin: auto;
-    }
-}
-
-@media (max-width: 400px) {
-    .wrapper{
-        max-width: 320px !important;
-        margin: auto;
-    }
 }
