@@ -12,6 +12,8 @@
     font-family: Syne;
     font-size: 128px;
     align-items: center;
+
+    cursor: default;
 }
 
 .name {
@@ -21,6 +23,13 @@
     color: #5988FF;
     font-size: 48px;
     font-weight: 700;
+
+    transition: 0.2s;
+    cursor: default;
+
+    &:hover{
+        color: rgb(49, 91, 197);
+    }
 
     img {
         margin-right: 16px;
@@ -42,6 +51,15 @@
         rotate: 180deg;
         font-size: 23px;
         font-weight: 300;
+
+        text-decoration: none;
+        color: unset;
+
+        transition: 0.2s;
+        
+        &:hover{
+         color: grey;
+        }
     }
 
     .scroll-down {
@@ -62,7 +80,7 @@
                 max-width: 100%;
                 position: absolute;
                 top: -100%;
-                animation: scrollAnimation 2s linear infinite;
+                animation: scrollAnimation 1s linear infinite;
             }
         }
     }
