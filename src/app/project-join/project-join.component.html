@@ -1,0 +1,44 @@
+<div class="content wrapper">
+
+
+
+  <div class="project-container" (mouseenter)="showDescription(0)" (mouseleave)="hideDescription(0)">
+
+
+            <div class="project-image" [@divState]="state" #aboutmeLeft>
+              <div class="number-container-small-screen">
+                01/04
+              </div>
+              <img src="./assets/img/join.png">
+              <img class="arrow-down" src="./assets/img/project-arrow.png" alt="">
+            </div>
+
+
+            <div [ngClass]="{'show': isDescriptionVisible(0)}" class="project-description">
+
+              <div class="project-number">01/04</div>
+              <h3 class="project-title">Join</h3>
+              <p class="project-tools">HTML | CSS | JS</p>
+              <span class="project-short-description">Task Manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign
+                users and categories,</span>
+
+
+
+              <div class="button-container">
+                <button class="button" (click)="navigateTo('https://hasan-coskun.developerakademie.net/join/html/index.html')">
+                  Live
+                </button>
+
+                <button class="button" (click)="navigateTo('https://github.com/MustafaSoycan/join')">
+                  Github
+                </button>
+              </div>
+
+            </div>
+
+
+  </div>
+
+
+
+</div>

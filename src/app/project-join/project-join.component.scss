@@ -1,0 +1,173 @@
+//------------ CONTENT---------------------//
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+}
+
+//--------------- PROJECT CONTAINER ------------//
+.project-container {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  gap: 100px;
+  position: relative;
+  z-index: 2;
+}
+
+//--------------PROJECT IMAGE------------------//
+.project-image {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 225ms ease-in-out;
+  border: 3px solid transparent;
+  filter: grayscale(100%);
+
+  .arrow-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 75px;
+    right: -15px;
+    top: 122px;
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    transition: all 225ms ease-in-out;
+    transform: rotate(90deg);
+  }
+}
+
+//------------- PROJECT IMAGE BORDER ON HOVER ----------------- //
+.project-image::before {
+  content: "";
+  position: absolute;
+  border: 3px solid transparent;
+  opacity: 0;
+  z-index: 1;
+  transition: all 225ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+img {
+  height: 380px;
+  width: 570px;
+  z-index: 0;
+}
+
+.project-container:hover .project-image::before {
+  opacity: 1;
+  border: 3px solid black;
+  top: 25px;
+  left: 25px;
+  right: -25px;
+  bottom: -25px;
+}
+
+
+
+.project-container:hover .project-description .project-number {
+  color: rgb(89, 136, 255);
+  transition: color 225ms ease 225ms; // Smooth transition with a delay of 1 second
+}
+
+.project-container:hover .project-image {
+  filter: none;
+}
+
+.project-container:hover .arrow-down {
+  opacity: 1;
+  position: absolute;
+  right: -62px;
+  top: 170px;
+  transform: rotate(0);
+}
+
+
+//---------------------- DESCRIPTION CONTAINER------------------------//
+.project-description {
+  position: relative;
+  z-index: -10;
+  top: 0;
+  left: -550px;
+  opacity: 0;
+  transition: left 225ms ease 225ms, opacity 225ms ease;
+
+  &.show {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+
+//---------------- PROJECT-NUMBER-----------------------//
+.project-number {
+  display: flex;
+  justify-content: end;
+  font-family: Syne;
+  font-weight: 700;
+  font-size: 32px;
+  padding-bottom: 50px;
+}
+
+.number-container-small-screen {
+  display: none;
+  font-weight: 700;
+  font-size: 48px;
+  padding-bottom: 20px;
+}
+
+
+
+//------------PROJECT-TOOLS--------------//
+
+.project-tools {
+  font-family: Overpass;
+  color: rgb(89, 136, 255);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+//-----------PROJECT TITLE-----------//
+.project-title {
+  font-family: Syne;
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0;
+}
+
+//--------------- PROJECT-SHORT-DESCRIPTION---------//
+
+.project-short-description {
+  font-size: 16px;
+  font-family: Overpass;
+}
+
+//-----------PROJECT-BUTTON-------------//
+
+.button{
+  border: 4px solid black;
+  padding: 15px 50px;
+
+  font-size: 23px;
+  font-weight: 400;
+  font-family: Overpass;
+
+  transition: 0.2s;
+
+  background-color: rgb(255, 252, 243);
+
+  &:hover{
+      cursor: pointer;
+      background-color: black;
+      color: white;
+  }
+}
