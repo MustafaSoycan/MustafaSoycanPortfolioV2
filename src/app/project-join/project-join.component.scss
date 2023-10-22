@@ -19,7 +19,7 @@
 }
 
 //--------------PROJECT IMAGE------------------//
-.project-image {
+.project-image-container {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -44,7 +44,7 @@
 }
 
 //------------- PROJECT IMAGE BORDER ON HOVER ----------------- //
-.project-image::before {
+.project-image-container::before {
   content: "";
   position: absolute;
   border: 3px solid transparent;
@@ -57,13 +57,13 @@
   bottom: 0;
 }
 
-img {
-  height: 380px;
-  width: 570px;
+.project-image {
+  height: 360px;
+  width: 550px;
   z-index: 0;
 }
 
-.project-container:hover .project-image::before {
+.project-container:hover .project-image-container::before {
   opacity: 1;
   border: 3px solid black;
   top: 25px;
@@ -79,7 +79,7 @@ img {
   transition: color 225ms ease 225ms; // Smooth transition with a delay of 1 second
 }
 
-.project-container:hover .project-image {
+.project-container:hover .project-image-container {
   filter: none;
 }
 
@@ -94,6 +94,11 @@ img {
 
 //---------------------- DESCRIPTION CONTAINER------------------------//
 .project-description {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+
   position: relative;
   z-index: -10;
   top: 0;
@@ -112,7 +117,7 @@ img {
 .project-number {
   display: flex;
   justify-content: end;
-  font-family: Syne;
+  font-family: Overpass;
   font-weight: 700;
   font-size: 32px;
   padding-bottom: 50px;
@@ -152,10 +157,18 @@ img {
 }
 
 //-----------PROJECT-BUTTON-------------//
+.button-container {
+  width: 270px;
+  gap: 24px;
+  display: flex;
+}
 
-.button{
+
+.button {
+
+
   border: 4px solid black;
-  padding: 15px 50px;
+  padding: 10px 30px;
 
   font-size: 23px;
   font-weight: 400;
@@ -165,9 +178,20 @@ img {
 
   background-color: rgb(255, 252, 243);
 
-  &:hover{
-      cursor: pointer;
-      background-color: black;
-      color: white;
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }
+}
+
+@media (max-width: 1280px) {
+  .project-image{
+    height: 340px;
+    width: 450px;
+  }
+
+  .project-title{
+    font-size: 32px;
   }
 }

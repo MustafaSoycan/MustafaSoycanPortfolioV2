@@ -12,6 +12,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectJoinComponent } from './project-join/project-join.component';
 import { ProjectElPolloLocoComponent } from './project-el-pollo-loco/project-el-pollo-loco.component';
+import { ProjectPortfolioComponent } from './project-portfolio/project-portfolio.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProjectElPolloLocoComponent } from './project-el-pollo-loco/project-el-
     PortfolioComponent,
     ContactComponent,
     ProjectJoinComponent,
-    ProjectElPolloLocoComponent
+    ProjectElPolloLocoComponent,
+    ProjectPortfolioComponent
   ],
   imports: [
     BrowserModule,

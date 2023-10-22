@@ -10,7 +10,6 @@
 .project-container {
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
   width: 100vw;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -44,7 +43,6 @@
   }
 }
 
-
 //------------- PROJECT IMAGE BORDER ON HOVER ----------------- //
 .project-image-container::before {
   content: "";
@@ -59,20 +57,22 @@
   bottom: 0;
 }
 
-//---------------------- PROJECT IMAGE ---------------- //
-.project-image {
+img {
   height: 380px;
   width: 570px;
+  z-index: 0;
 }
 
 .project-container:hover .project-image-container::before {
   opacity: 1;
   border: 3px solid black;
   top: 25px;
-  left: -25px;
-  right: 25px;
+  left: 25px;
+  right: -25px;
   bottom: -25px;
 }
+
+
 
 .project-container:hover .project-description .project-number {
   color: rgb(89, 136, 255);
@@ -86,36 +86,37 @@
 .project-container:hover .arrow-down {
   opacity: 1;
   position: absolute;
-  left: -62px;
+  right: -62px;
   top: 170px;
-  transform: rotate(260deg);
+  transform: rotate(0);
 }
+
 
 //---------------------- DESCRIPTION CONTAINER------------------------//
 .project-description {
   display: flex;
   flex-direction: column;
+
   gap: 16px;
 
-  width: 570px;
-  flex-basis: 50%;
   position: relative;
   z-index: -10;
   top: 0;
-  right: -550px;
+  left: -550px;
   opacity: 0;
-  transition: right 225ms ease 225ms, opacity 225ms ease;
+  transition: left 225ms ease 225ms, opacity 225ms ease;
 
   &.show {
-    right: 0;
+    left: 0;
     opacity: 1;
   }
 }
 
+
 //---------------- PROJECT-NUMBER-----------------------//
 .project-number {
   display: flex;
-  justify-content: start;
+  justify-content: end;
   font-family: Overpass;
   font-weight: 700;
   font-size: 32px;
@@ -128,6 +129,8 @@
   font-size: 48px;
   padding-bottom: 20px;
 }
+
+
 
 //------------PROJECT-TOOLS--------------//
 
@@ -159,6 +162,7 @@
   gap: 24px;
   display: flex;
 }
+
 
 .button {
 
