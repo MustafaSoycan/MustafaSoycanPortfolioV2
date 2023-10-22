@@ -1,1 +1,43 @@
-<p>contact works!</p>
+<div class="content">
+
+
+    <div class="contact-container wrapper">
+        <h2 class="contact-header component-header">Say Hi!</h2>
+
+        <div class="contact-formular-background wrapper">
+
+            <div class="contact-formular-container">
+
+                <div class="contact-formular-header">
+                    <span class="discuss-project">Want to discuss a new project?</span>
+                    <span class="discuss-ideas">Say hello! let's discuss your ideas and make it happen</span>
+                </div>
+
+
+                <form  (submit)="sendMail()" ngNativeValidate #myForm class="contact-formular">
+
+                    <div class="inputfield-container">
+                        <input class="inputfield" required type="text" placeholder="your name" name="name" #nameField>
+                    </div>
+
+                    <div class="inputfield-container">
+                        <input class="inputfield" required type="text" placeholder="your email" name="email" #emailField>
+                    </div>
+
+                    <div class="inputfield-container">
+                        <input class="inputfield" required type="text" placeholder="your message" name="message" #messageField>
+                    </div>
+
+                    <div>
+                        <button class="button" #sendButton>Senden</button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+s
+    </div>
+
+
+</div>
