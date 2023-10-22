@@ -2,8 +2,6 @@
     max-width: 1240px;
     width: 100%;
     margin: auto;
-
-    border: 2px solid black;
 }
 
 body{
@@ -33,6 +31,10 @@ body{
         max-width: 800px !important;
         margin: auto;
     }
+
+    .component-header{
+        font-size: 68px;
+    }
 }
 
 
@@ -41,12 +43,20 @@ body{
         max-width: 650px !important;
         margin: auto;
     }
+
+    .component-header{
+        font-size: 58px !important;
+    }
 }
 
 @media (max-width: 730px) {
     .wrapper{
         max-width: 550px !important;
         margin: auto;
+    }
+
+    .component-header{
+        font-size: 48px !important;
     }
 }
 
@@ -62,11 +72,28 @@ body{
         max-width: 380px !important;
         margin: auto;
     }
+    .component-header{
+        font-size: 38px !important;
+    }
 }
 
 @media (max-width: 400px) {
     .wrapper{
         max-width: 320px !important;
         margin: auto;
+    }
+    .component-header{
+        font-size: 36px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .wrapper{
+        max-width: 280px !important;
+        margin: auto;
+    }
+
+    .component-header{
+        font-size: 32px !important;
     }
 }

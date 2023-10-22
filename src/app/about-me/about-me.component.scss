@@ -94,80 +94,51 @@
 
 .about-me-header{
     text-align: center;
-    font-size: 68px;
 }
-}
-
-@media (max-width: 880px) {
-    .about-me-header{
-        font-size: 58px;
-    }
 }
 
 @media (max-width: 730px) {
-    .about-me-header{
-        font-size: 48px;
-    }
-
     .about-me-content{
         gap: 80px;
     }
-
     .about-me-text-container{
         max-width: 360px;
     }
-
     .about-me-picture{
         height: 450px;
         width: 360px;
     }
-
     .lets-talk-button-container{
         display: none;
     }
-
     .arrow-picture{
         height: 200px;
     }
 }
 
 @media (max-width: 480px) {
-    .about-me-header{
-        font-size: 38px;
-    }
-
     .about-me-text-container{
         max-width: 330px;
     }
-
     .about-me-picture-container{
         gap: 30px;
     }
-
     .about-me-picture{
         height: 400px;
         width: 330px;
     }
-
     .about-me-content{
         gap: 50px;
     }
-
     .about-me-text{
         font-size: 20px;
     }
-
     .arrow-picture{
         height: 160px;
     }
 }
 
 @media (max-width: 400px) {
-
-    .about-me-header{
-        font-size: 36px;
-    }
-
     .about-me-text-container{
         max-width: 280px;
     }
@@ -183,11 +154,6 @@
 }
 
 @media (max-width: 380px) {
-
-    .about-me-header{
-        font-size: 32px;
-    }
-
     .about-me-text-container{
         max-width: 260px;
     }
