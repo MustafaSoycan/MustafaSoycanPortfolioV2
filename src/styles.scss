@@ -1,12 +1,13 @@
-.wrapper{
+.wrapper {
     max-width: 1240px;
     width: 100%;
     margin: auto;
 }
 
-body{
+body {
     margin: 0;
     background-color: rgb(255, 252, 243);
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -20,80 +21,103 @@ body{
 }
 
 @media (max-width: 1280px) {
-    .wrapper{
+    .wrapper {
         max-width: 1000px !important;
         margin: auto;
     }
 }
 
 @media (max-width: 1050px) {
-    .wrapper{
+    .wrapper {
         max-width: 800px !important;
         margin: auto;
     }
 
-    .component-header{
+    .component-header {
         font-size: 68px;
     }
 }
 
 
 @media (max-width: 880px) {
-    .wrapper{
+    .wrapper {
         max-width: 650px !important;
         margin: auto;
     }
 
-    .component-header{
+    .component-header {
         font-size: 58px !important;
     }
 }
 
 @media (max-width: 730px) {
-    .wrapper{
+    .wrapper {
         max-width: 550px !important;
         margin: auto;
     }
 
-    .component-header{
+    .component-header {
         font-size: 48px !important;
     }
 }
 
 @media (max-width: 580px) {
-    .wrapper{
+    .wrapper {
         max-width: 450px !important;
         margin: auto;
     }
 }
 
 @media (max-width: 480px) {
-    .wrapper{
+    .wrapper {
         max-width: 380px !important;
         margin: auto;
     }
-    .component-header{
+
+    .component-header {
         font-size: 38px !important;
     }
 }
 
 @media (max-width: 400px) {
-    .wrapper{
+    .wrapper {
         max-width: 320px !important;
         margin: auto;
     }
-    .component-header{
+
+    .component-header {
         font-size: 36px !important;
     }
 }
 
 @media (max-width: 360px) {
-    .wrapper{
+    .wrapper {
         max-width: 280px !important;
         margin: auto;
     }
 
-    .component-header{
+    .component-header {
         font-size: 32px !important;
     }
+}
+
+/* Webkit-basierte Browser (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 12px;
+    /* Breite der Scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5988FF;
+    /* Farbe des Scrollbar-Thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3a61c2;
+    /* Farbe des Scrollbar-Thumb beim Hover */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Farbe des Scrollbar-Tracks */
 }

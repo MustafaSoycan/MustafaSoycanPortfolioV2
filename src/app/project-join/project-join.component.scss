@@ -1,3 +1,4 @@
+
 //------------ CONTENT---------------------//
 .content {
   display: flex;
@@ -205,6 +206,7 @@
     max-width: 460px !important;
     margin: 0 auto;
     gap: 50px;
+    overflow: hidden;
 
     .project-number {
       display: none;
@@ -222,6 +224,8 @@
       left: unset;
       text-align: center;
     }
+
+    
 
     .project-container:hover .project-image-container::before {
       opacity: 0;
