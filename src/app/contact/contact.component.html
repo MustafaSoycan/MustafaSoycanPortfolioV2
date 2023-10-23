@@ -14,20 +14,18 @@
                 </div>
 
 
-                <form (submit)="sendMail()" ngNativeValidate #myForm class="contact-formular">
+                <form (submit)="sendMail()" method="post" class="contact-formular" #myForm>
 
                     <div class="inputfield-container">
                         <input class="inputfield" required type="text" placeholder="your name" name="name" #nameField>
                     </div>
 
                     <div class="inputfield-container">
-                        <input class="inputfield" required type="text" placeholder="your email" name="email"
-                            #emailField>
+                        <input class="inputfield" required type="text" placeholder="your email" name="email" #emailField>
                     </div>
 
                     <div class="inputfield-container">
-                        <input class="inputfield" required type="text" placeholder="your message" name="message"
-                            #messageField>
+                        <input class="inputfield" required type="text" placeholder="your message" name="message" #messageField>
                     </div>
 
                     <div class="accept-data-protection-container">
@@ -48,7 +46,7 @@
 
 
         </div>
-        s
+        
     </div>
 
 
