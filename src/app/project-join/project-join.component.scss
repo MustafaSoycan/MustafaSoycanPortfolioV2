@@ -106,7 +106,7 @@
   left: -550px;
   opacity: 0;
   transition: left 225ms ease 225ms, opacity 225ms ease;
-
+  cursor: default;
   &.show {
     left: 0;
     opacity: 1;

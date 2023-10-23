@@ -59,6 +59,10 @@ body {
     .component-header {
         font-size: 48px !important;
     }
+
+    .arrow-picture {
+        height: 200px;
+    }
 }
 
 @media (max-width: 580px) {
@@ -77,6 +81,11 @@ body {
     .component-header {
         font-size: 38px !important;
     }
+
+    .arrow-picture {
+        height: 160px;
+    }
+
 }
 
 @media (max-width: 400px) {
@@ -87,6 +96,12 @@ body {
 
     .component-header {
         font-size: 36px !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .arrow-picture {
+        height: 140px;
     }
 }
 
@@ -121,5 +136,3 @@ body {
     background: #f1f1f1;
     /* Farbe des Scrollbar-Tracks */
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

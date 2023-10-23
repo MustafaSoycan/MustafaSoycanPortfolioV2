@@ -1,6 +1,3 @@
-.content {
-    margin-top: 10vh;
-}
 
 //--------------- SKILLS CONTAINER ---------------- //
 .skills-container {
@@ -29,7 +26,7 @@
 
     &:hover {
         cursor: default;
-        color: rgb(89, 136, 255);
+        color: #5188FF;
     }
 }
 
@@ -69,25 +66,35 @@
     height: 70px;
     width: 70px;
 
-    .icon-picture {
-        transition: 0.2s;
+    transition: 0.2s;
 
-        &:hover {
+
+    &:hover {
+        color: #5188FF;
+        
+        .icon-picture{
             transform: translateY(-5px);
         }
-    }
 
-    .icon-name {
-        margin-top: 12px;
-        text-align: center;
     }
 }
 
+.icon-name {
+    margin-top: 12px;
+    text-align: center;
+}
+
+.icon-picture{
+    transition: 0.2s;
+}
+
+
 //-------------- ARROW CONTAINER ------------ //
 .arrow-container {
-   display: flex;
-   justify-content: flex-start;
-   margin-top: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 
 //------------ MOBILE ROW-------------//
@@ -174,13 +181,11 @@
         font-size: 48px;
         top: -33px;
     }
-
     .skills-container {
         max-width: 550px !important;
         margin: auto;
 
     }
-
     .icon-picture {
         height: 60px;
     }
@@ -189,17 +194,12 @@
         gap: 72px;
     }
 
-    .arrow-picture {
-        height: 200px;
-    }
-
 }
 
 @media (max-width: 580px) {
     .skills-container {
         max-width: 450px !important;
         margin: auto;
-
     }
 }
 
@@ -208,15 +208,9 @@
         font-size: 38px;
         top: -27px;
     }
-
     .mobile-row {
         gap: 53px;
     }
-
-    .arrow-picture {
-        height: 160px;
-    }
-
 }
 
 @media (max-width: 400px) {
@@ -248,11 +242,6 @@
     }
 }
 
-@media (max-width: 380px) {
-    .arrow-picture {
-        height: 140px;
-    }
-}
 
 @media (max-width: 360px) {
     .skills-container {

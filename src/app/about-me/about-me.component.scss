@@ -82,6 +82,7 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 10vh;
+    margin-bottom: 10vh;
 }
 
 
@@ -111,9 +112,6 @@
     .lets-talk-button-container{
         display: none;
     }
-    .arrow-picture{
-        height: 200px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -132,9 +130,6 @@
     }
     .about-me-text{
         font-size: 20px;
-    }
-    .arrow-picture{
-        height: 160px;
     }
 }
 
@@ -161,9 +156,5 @@
     .about-me-picture{
         height: 360px;
         width: 260px;
-    }
-
-    .arrow-picture{
-        height: 140px;
     }
 }
