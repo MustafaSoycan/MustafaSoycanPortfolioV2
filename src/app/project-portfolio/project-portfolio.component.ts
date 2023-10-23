@@ -6,19 +6,6 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   selector: 'app-project-portfolio',
   templateUrl: './project-portfolio.component.html',
   styleUrls: ['./project-portfolio.component.scss'],
-  animations: [
-    trigger('divState', [
-      state('normal', style({
-        transform:'translateX(50px)',
-        opacity: '0'
-      })),
-      state('unnormal', style({
-        transform:'translateX(0)',
-        opacity: '1'
-      })),
-      transition('normal <=> unnormal', animate(700)),
-    ])
-  ]
 })
 
 export class ProjectPortfolioComponent implements AfterViewInit {

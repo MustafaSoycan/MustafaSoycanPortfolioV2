@@ -5,20 +5,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 @Component({
   selector: 'app-project-el-pollo-loco',
   templateUrl: './project-el-pollo-loco.component.html',
-  styleUrls: ['./project-el-pollo-loco.component.scss'],
-  animations: [
-    trigger('divState', [
-      state('normal', style({
-        transform:'translateX(50px)',
-        opacity: '0'
-      })),
-      state('unnormal', style({
-        transform:'translateX(0)',
-        opacity: '1'
-      })),
-      transition('normal <=> unnormal', animate(700)),
-    ])
-  ]
+  styleUrls: ['./project-el-pollo-loco.component.scss']
 })
 export class ProjectElPolloLocoComponent {
   state = 'normal';

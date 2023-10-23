@@ -5,20 +5,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 @Component({
   selector: 'app-project-join',
   templateUrl: './project-join.component.html',
-  styleUrls: ['./project-join.component.scss'],
-  animations: [
-    trigger('divState', [
-      state('normal', style({
-        transform:'translateX(50px)',
-        opacity: '0'
-      })),
-      state('unnormal', style({
-        transform:'translateX(0)',
-        opacity: '1'
-      })),
-      transition('normal <=> unnormal', animate(700)),
-    ])
-  ]
+  styleUrls: ['./project-join.component.scss']
 })
 
 export class ProjectJoinComponent implements AfterViewInit {
