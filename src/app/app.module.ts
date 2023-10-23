@@ -13,6 +13,8 @@ import { ContactComponent } from './contact/contact.component';
 import { ProjectJoinComponent } from './project-join/project-join.component';
 import { ProjectElPolloLocoComponent } from './project-el-pollo-loco/project-el-pollo-loco.component';
 import { ProjectPortfolioComponent } from './project-portfolio/project-portfolio.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,13 @@ import { ProjectPortfolioComponent } from './project-portfolio/project-portfolio
     ContactComponent,
     ProjectJoinComponent,
     ProjectElPolloLocoComponent,
-    ProjectPortfolioComponent
+    ProjectPortfolioComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

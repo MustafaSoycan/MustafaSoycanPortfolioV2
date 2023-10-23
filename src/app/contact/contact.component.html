@@ -14,29 +14,41 @@
                 </div>
 
 
-                <form  (submit)="sendMail()" ngNativeValidate #myForm class="contact-formular">
+                <form (submit)="sendMail()" ngNativeValidate #myForm class="contact-formular">
 
                     <div class="inputfield-container">
                         <input class="inputfield" required type="text" placeholder="your name" name="name" #nameField>
                     </div>
 
                     <div class="inputfield-container">
-                        <input class="inputfield" required type="text" placeholder="your email" name="email" #emailField>
+                        <input class="inputfield" required type="text" placeholder="your email" name="email"
+                            #emailField>
                     </div>
 
                     <div class="inputfield-container">
-                        <input class="inputfield" required type="text" placeholder="your message" name="message" #messageField>
+                        <input class="inputfield" required type="text" placeholder="your message" name="message"
+                            #messageField>
+                    </div>
+
+                    <div class="accept-data-protection-container">
+                        <label class="checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkbox-sentence">Ich stimme der <span
+                                    class="data-protection-word">Datenschutzerklärung</span> zu.</span>
+                        </label>
                     </div>
 
                     <div>
                         <button class="button" #sendButton>Senden</button>
                     </div>
                 </form>
+
+
             </div>
 
 
         </div>
-s
+        s
     </div>
 
 

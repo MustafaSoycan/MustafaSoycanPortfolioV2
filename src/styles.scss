@@ -34,7 +34,7 @@ body {
     }
 
     .component-header {
-        font-size: 68px;
+        font-size: 68px !important;
     }
 }
 
@@ -121,3 +121,5 @@ body {
     background: #f1f1f1;
     /* Farbe des Scrollbar-Tracks */
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
