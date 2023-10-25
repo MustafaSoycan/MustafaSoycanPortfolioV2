@@ -1,0 +1,38 @@
+.content{
+    height: 75%;
+    margin-bottom: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 128px;
+    .navigation-link{
+        font-family: Syne;
+        font-weight: 700;
+        font-size: 96px;
+        text-decoration: none;
+        color: black;
+    }
+}
+
+
+//---------------- NAVIGATION FOOTER -----------------//
+
+.navigation-footer{
+    background-color: black;
+    height: 25%;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin-bottom: -5px;
+    clip-path: polygon(0% 0%,100% 35%,100% 100%,0% 100%);
+}

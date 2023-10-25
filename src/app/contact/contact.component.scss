@@ -1,7 +1,10 @@
 .content {
-    background-color: black;
+    background-color: #000;
     width: 100%;
     padding-top: 5vh;
+    padding-bottom: 5vh;
+    margin-bottom: -5px;
+    clip-path: polygon(0% 0%,100% 10%,100% 100%,0% 100%);
 }
 
 .contact-header {
