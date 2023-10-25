@@ -32,7 +32,7 @@
         opacity: 1;
 
         &:hover {
-            opacity: 0.7;
+            opacity: 0.6;
             cursor: pointer;
         }
     }
@@ -51,7 +51,15 @@
     background: none;
     outline: none;
     border: none;
+
+    transition: 0.2s;
+    opacity: 1;
+
+    &:hover{
+        opacity: 0.6;
+    }
 }
+
 
 .hamburger .bar,
 .hamburger:after,
@@ -75,4 +83,14 @@
 
 .hamburger.is-active .bar {
     opacity: 0;
+}
+
+
+
+@media (max-width: 730px) {
+    .header{
+        img{
+            height: 45px;
+        }
+    }
 }

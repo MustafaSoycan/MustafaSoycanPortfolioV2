@@ -13,7 +13,7 @@
     transition: 0.2s;
 
     &:hover {
-        color: rgb(89, 136, 255);
+        color: #5988FF;
         cursor: default;
     }
 }
@@ -148,6 +148,7 @@
     &:hover {
         cursor: pointer;
         color: white;
+        border: 4px solid white;
     }
 }
 

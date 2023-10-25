@@ -106,6 +106,7 @@
   opacity: 0;
   transition: left 225ms ease 225ms, opacity 225ms ease;
   cursor: default;
+
   &.show {
     left: 0;
     opacity: 1;
@@ -140,7 +141,7 @@
 
 .project-tools {
   font-family: Overpass;
-  color: rgb(89, 136, 255);
+  color: #5988FF;
   font-size: 24px;
   font-weight: 700;
 }
@@ -191,7 +192,7 @@
 
 //--------------- ARROW CONTAINER ------------- //
 
-.arrow-container{
+.arrow-container {
   display: flex;
   justify-content: flex-end;
   margin-top: 10vh;
@@ -199,12 +200,12 @@
 }
 
 @media (max-width: 1280px) {
-  .project-image{
+  .project-image {
     height: 340px;
     width: 450px;
   }
 
-  .project-title{
+  .project-title {
     font-size: 32px;
   }
 }
@@ -237,7 +238,7 @@
       /* Die Border-Regel beim Hover deaktivieren */
     }
 
-    .project-image-container::before  {
+    .project-image-container::before {
       border: unset !important;
     }
   }
@@ -275,20 +276,23 @@
     max-width: 360px;
   }
 
-  .project-description{
+  .project-description {
     max-width: 360px;
   }
 
-  .project-title{
+  .project-title {
     font-size: 26px;
   }
-  .project-tools{
+
+  .project-tools {
     font-size: 18px;
   }
-  .button{
+
+  .button {
     padding: 5px 25px;
   }
-  .project-container{
+
+  .project-container {
     gap: 25px;
   }
 }
@@ -299,7 +303,7 @@
     max-width: 280px;
   }
 
-  .project-description{
+  .project-description {
     max-width: 280px;
   }
 }
