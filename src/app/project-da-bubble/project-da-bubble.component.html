@@ -1,0 +1,35 @@
+<div class="content wrapper">
+
+    <div class="project-container wrapper" (mouseenter)="showDescription(0)" (mouseleave)="hideDescription(0)">
+  
+      <div class="project-image-container" #aboutmeLeft>
+        <div class="number-container-small-screen">02/03</div>
+        <img class="project-image" src="./assets/img/da-bubble.png">
+        <img class="arrow-down" src="./assets/img/project-arrow.png" alt="">
+      </div>
+  
+  
+      <div class="project-description" [ngClass]="{'show': isDescriptionVisible(0)}">
+  
+        <div class="project-number">02/03</div>
+  
+        <h3 class="project-title">DA Bubble</h3>
+  
+        <span class="project-tools">Typescript | Angular | SCSS | HTML | Firebase</span>
+  
+        <span class="project-short-description">COMING SOON</span>
+  
+        <div class="button-container">
+          <button class="button">
+            Live
+          </button>
+  
+          <button class="button" (click)="navigateTo('https://github.com/Philzore/DaBubble')">
+            Github
+          </button>
+        </div>
+  
+  
+      </div>
+    </div>
+  </div>

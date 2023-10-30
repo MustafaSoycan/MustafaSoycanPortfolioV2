@@ -17,6 +17,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import { ProjectDaBubbleComponent } from './project-da-bubble/project-da-bubble.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
     ProjectElPolloLocoComponent,
     ProjectPortfolioComponent,
     FooterComponent,
-    LegalNoticeComponent
+    LegalNoticeComponent,
+    ProjectDaBubbleComponent
   ],
   imports: [
     BrowserModule,

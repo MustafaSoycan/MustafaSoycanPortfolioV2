@@ -61,6 +61,7 @@
   height: 380px;
   width: 570px;
   z-index: 0;
+  border: 3px solid black;
 }
 
 .project-container:hover .project-image-container::before {
