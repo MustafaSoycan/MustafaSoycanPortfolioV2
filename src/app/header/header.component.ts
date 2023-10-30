@@ -11,9 +11,16 @@ export class HeaderComponent {
 
   constructor(private router: Router) { }
 
-  toggleHamburger() {
+  toggleNavigation() {
     this.isHamburgerActive = !this.isHamburgerActive;
-    this.router.navigate(['navigation']);
+
+    if(this.isHamburgerActive){
+      console.log('Hamburger is active');
+      this.router.navigate(['navigation']);
+    }else{
+      console.log('Hamburger is not active');
+      this.router.navigate(['']);
+    }
   }
 
 }

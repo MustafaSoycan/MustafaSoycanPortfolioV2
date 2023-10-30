@@ -13,4 +13,10 @@ export class AppComponent {
     AOS.init();
     window.addEventListener('load', AOS.refresh)
   }
+
+  isHamburgerActive: boolean = false;
+
+  toggleHamburger() {
+    this.isHamburgerActive = !this.isHamburgerActive;
+  }
 }

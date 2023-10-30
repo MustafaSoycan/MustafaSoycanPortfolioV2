@@ -1,6 +1,7 @@
 import { Component, Renderer2 } from '@angular/core';
 import { AppComponent } from '../app.component';
-import { HeaderComponent } from '../header/header.component';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-navigation',
@@ -8,12 +9,9 @@ import { HeaderComponent } from '../header/header.component';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-  constructor(private appComponent: AppComponent, private renderer: Renderer2, private headerComponent: HeaderComponent) {}
+  constructor(private appComponent: AppComponent, private renderer: Renderer2, private router: Router) {}
   
-  scrollToSection(sectionId: string): void {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  navigateToSection(){
+    this.router.navigate(['']);
   }
 }
