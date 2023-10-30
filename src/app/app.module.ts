@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { MyNameComponent } from './my-name/my-name.component';
 import { AboutMeComponent } from './about-me/about-me.component';
@@ -18,6 +17,8 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { ProjectDaBubbleComponent } from './project-da-bubble/project-da-bubble.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ProjectDaBubbleComponent } from './project-da-bubble/project-da-bubble.
     ProjectPortfolioComponent,
     FooterComponent,
     LegalNoticeComponent,
-    ProjectDaBubbleComponent
+    ProjectDaBubbleComponent,
+    MainpageComponent
   ],
   imports: [
     BrowserModule,
