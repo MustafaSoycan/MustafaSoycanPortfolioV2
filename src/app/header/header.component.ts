@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-header',
@@ -9,15 +10,19 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   isHamburgerActive: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private sharedService: SharedService) {
+    this.sharedService.isHamburgerActive$.subscribe((isActive) => {
+      this.isHamburgerActive = isActive;
+    });
+  }
 
   toggleNavigation() {
-    this.isHamburgerActive = !this.isHamburgerActive;
+    this.sharedService.toggleHamburgerState();
 
-    if(this.isHamburgerActive){
+    if (this.isHamburgerActive) {
       console.log('Hamburger is active');
       this.router.navigate(['navigation']);
-    }else{
+    } else {
       console.log('Hamburger is not active');
       this.router.navigate(['']);
     }

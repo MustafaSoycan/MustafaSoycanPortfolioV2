@@ -1,6 +1,7 @@
-import { Component, Renderer2 } from '@angular/core';
-import { AppComponent } from '../app.component';
+import { Component} from '@angular/core';
 import { Router } from '@angular/router';
+import { SharedService } from '../shared.service';
+
 
 
 @Component({
@@ -9,9 +10,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-  constructor(private appComponent: AppComponent, private renderer: Renderer2, private router: Router) {}
+  constructor( private router: Router, private sharedService: SharedService) {}
   
-  navigateToSection(){
+  navigateToSection() {
+    this.sharedService.toggleHamburgerState();
     this.router.navigate(['']);
   }
 }
