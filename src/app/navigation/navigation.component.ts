@@ -12,8 +12,8 @@ import { SharedService } from '../shared.service';
 export class NavigationComponent {
   constructor( private router: Router, private sharedService: SharedService) {}
 
-  navigateToSection(sectionID: string) {
-    this.router.navigate(['/'], { fragment: sectionID });
+  toggleHamburger(){
     this.sharedService.toggleHamburgerState();
   }
+
 }

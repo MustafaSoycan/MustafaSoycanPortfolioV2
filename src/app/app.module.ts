@@ -19,6 +19,13 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 import { ProjectDaBubbleComponent } from './project-da-bubble/project-da-bubble.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { HeaderComponent } from './header/header.component';
+import { ROUTES, RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  { path: 'about-me', component: AboutMeComponent },
+  { path: 'skills', component: SkillsComponent },
+  { path: 'portfolio', component: PortfolioComponent },
+];
 
 @NgModule({
   declarations: [
@@ -38,13 +45,21 @@ import { HeaderComponent } from './header/header.component';
     ProjectDaBubbleComponent,
     MainpageComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     NoopAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled',
+      scrollOffset: [0, 64] // [x, y]
+    })
   ],
+
+  exports: [RouterModule],
   providers: [],
   bootstrap: [AppComponent]
 })

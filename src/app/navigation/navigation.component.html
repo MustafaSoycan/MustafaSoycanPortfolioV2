@@ -1,15 +1,15 @@
 <div class="content">
     <div class="navigation wrapper">
         <span>
-            <a class="navigation-link" (click)="navigateToSection('/about-me')" >About Me</a>
+            <a class="navigation-link" routerLink="" fragment="about-me" (click)="toggleHamburger()">About Me</a>
         </span>
 
         <span>
-            <a class="navigation-link" (click)="navigateToSection('/skills')">My skills</a>
+            <a class="navigation-link" routerLink="" fragment="skills" (click)="toggleHamburger()">My skills</a>
         </span>
 
         <span>
-            <a class="navigation-link" (click)="navigateToSection('/portfolio')">Portfolio</a>
+            <a class="navigation-link" routerLink="" fragment="portfolio" (click)="toggleHamburger()">Portfolio</a>
         </span>
     </div>
 </div>

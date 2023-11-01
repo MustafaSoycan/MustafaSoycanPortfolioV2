@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: '', component: MainpageComponent },
   { path: 'legal-notice', component: LegalNoticeComponent },
   { path: 'about-me', component: AboutMeComponent },
-  { path: 'my-skills', component: SkillsComponent },
+  { path: 'skills', component: SkillsComponent },
   { path: 'portfolio', component: PortfolioComponent },
   { path: 'navigation', component: NavigationComponent },
 ];
