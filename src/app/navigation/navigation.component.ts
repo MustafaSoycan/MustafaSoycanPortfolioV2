@@ -11,9 +11,9 @@ import { SharedService } from '../shared.service';
 })
 export class NavigationComponent {
   constructor( private router: Router, private sharedService: SharedService) {}
-  
-  navigateToSection() {
+
+  navigateToSection(sectionID: string) {
+    this.router.navigate(['/'], { fragment: sectionID });
     this.sharedService.toggleHamburgerState();
-    this.router.navigate(['']);
   }
 }
