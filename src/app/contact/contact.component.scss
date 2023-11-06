@@ -4,7 +4,7 @@
     padding-top: 5vh;
     padding-bottom: 5vh;
     margin-bottom: -5px;
-    clip-path: polygon(0% 0%,100% 10%,100% 100%,0% 100%);
+    clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
 }
 
 .contact-header {
@@ -70,11 +70,24 @@
             color: white;
             transition: 0.2s;
             font-size: 16px;
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid #BBBBBB;
             font-family: Overpass;
             padding: 4px;
             background-color: black;
+
             &:hover {
                 cursor: pointer;
+            }
+
+            &:focus {
+                outline: none;
+                border-left: 4px solid #BBBBBB;
+                border-right: 4px solid #BBBBBB;
+                border-top: 4px solid #BBBBBB;
+                border-bottom: 4px solid #BBBBBB;
             }
         }
     }
@@ -91,34 +104,6 @@
     margin-right: 8px;
 
     gap: 32px;
-}
-
-// ------------------------ ACCEPT DATA RULES IN CHECKBOX ------------------ //
-.accept-data-protection-container {
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-}
-
-.checkbox-container {
-    display: flex;
-    align-items: center;  
-
-    input{
-        &:hover{
-            cursor: pointer;
-        }
-    }
-
-    &:hover{
-        cursor: pointer;
-    }
-}
-
-.checkbox-sentence {
-    font-size: 16px;
-    color: #42526E;
-    margin-left: 8px;
 }
 
 //------------------ SEND MESSAGE BUTTON -------------------//
@@ -142,22 +127,64 @@
     }
 }
 
-.invalid{
-    border-left: 4px solid red !important;
-    border-top: 4px solid red !important;
+//-------- ERROR VALIDATION --------- //
+.invalid {
     border-bottom: 4px solid red !important;
-    border-right: 4px solid red !important;
+
+    &:focus{
+        border-left: 4px solid red !important;
+        border-right: 4px solid red !important;
+        border-top: 4px solid red !important;
+    }
 }
 
-.error{
+.error {
     color: red;
     font-family: Overpass;
 }
 
 .button:disabled {
-    background-color: #666; /* Dunklerer Grauton */
+    border: 4px solid #5a5959;
     cursor: not-allowed;
-  }
+}
+
+// ------------------------ ACCEPT DATA RULES IN CHECKBOX ------------------ //
+.accept-data-protection-container {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+
+    input {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.checkbox-sentence {
+    font-size: 16px;
+    color: #42526E;
+    margin-left: 8px;
+}
+
+//-----------SUCCESS MESSAGE----------//
+
+.success-message{
+    color: white;
+    font-size: 16px;
+    font-family: Syne;
+    width: 100%;
+    text-align: center;
+}
 
 
 
@@ -176,7 +203,7 @@
         font-size: 28px !important;
     }
 
-    .button{
+    .button {
         padding: 10px 35px;
     }
 }
@@ -196,7 +223,7 @@
         font-size: 26px !important;
     }
 
-    .discuss-ideas{
+    .discuss-ideas {
         font-size: 20px !important;
     }
 }

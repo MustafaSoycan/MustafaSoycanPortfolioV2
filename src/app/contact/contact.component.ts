@@ -9,15 +9,16 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class ContactComponent {
   messageForm = this.fb.group({
     name: ['', Validators.required],
-    email: ['', Validators.required],
-    message: ['', Validators.required, Validators.email],
+    email: ['', [Validators.required, Validators.email]],
+    message: ['', Validators.required],
   })
 
   isSubmitted = false;
 
+  successMessage = '';
 
 
-  constructor(private fb: FormBuilder){}
+  constructor(private fb: FormBuilder) { }
 
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
@@ -57,18 +58,18 @@ export class ContactComponent {
 
       // Nachricht erfolgreich gesendet - Setze die Formularfelder zurück
       this.myForm.nativeElement.reset();
+      this.successMessage = 'Deine E-Mail wurde erfolgreich gesendet!';
+      this.enableFormFields();
     } catch (error) {
       // Bei einem Fehler kannst du hier eine Fehlerbehandlung durchführen
       console.error('Fehler beim Senden der Nachricht:', error);
-    } finally {
-      // Aktiviere die Eingabefelder und den Senden-Button nach dem Senden oder bei Fehlern
+      this.successMessage = 'Deine E-Mail konnte leider nicht abgesendet werden, ich kümmere mich schnellstmöglich drum! :)';
+      this.myForm.nativeElement.reset();
       this.enableFormFields();
-    }
-
+    } 
   }
 
-
-  canSendMail(){
+  canSendMail() {
     return (
       this.messageForm.invalid
     );
