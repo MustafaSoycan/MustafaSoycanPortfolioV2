@@ -14,22 +14,61 @@
                 </div>
 
 
-                <form (submit)="sendMail()" method="post" class="contact-formular" #myForm>
+                <form method="post" class="contact-formular" #myForm [formGroup]="messageForm" (ngSubmit)="sendMail()">
 
                     <div class="inputfield-container">
-                        <input class="inputfield" required type="text" placeholder="your name" name="name" #nameField>
+                        <input class="inputfield" required type="text" placeholder="your name" name="name" #nameField formControlName="name"
+                         [class.invalid]="
+                         messageForm.get('name')?.invalid && 
+                         (messageForm.get('name')?.dirty || 
+                         messageForm.get('name')?.touched || isSubmitted)
+                         ">
+
+                         
+                         <span *ngIf="
+                         messageForm.get('name')?.hasError('required') && 
+                         (messageForm.get('name')?.dirty || 
+                         messageForm.get('name')?.touched || isSubmitted)" class="error">
+                         Eingabe erforderlich
+                        </span>
+
                     </div>
 
                     <div class="inputfield-container">
-                        <input class="inputfield" required type="text" placeholder="your email" name="email" #emailField>
+                        <input class="inputfield" required type="email" placeholder="your email" name="email" #emailField formControlName="email"
+                        [class.invalid]="
+                        messageForm.get('email')?.invalid && 
+                        (messageForm.get('email')?.dirty || 
+                        messageForm.get('email')?.touched || isSubmitted)">
+
+                        
+                        <span *ngIf="
+                        messageForm.get('email')?.hasError('required') && 
+                        (messageForm.get('email')?.dirty || 
+                        messageForm.get('email')?.touched || isSubmitted)" class="error">
+                        Eingabe erforderlich
+                       </span>
+
                     </div>
 
                     <div class="inputfield-container">
-                        <input class="inputfield" required type="text" placeholder="your message" name="message" #messageField>
+                        <input class="inputfield" required type="text" placeholder="your message" name="message" #messageField formControlName="message"
+                        [class.invalid]="
+                        messageForm.get('message')?.invalid && 
+                        (messageForm.get('message')?.dirty || 
+                        messageForm.get('message')?.touched || isSubmitted)">
+
+                        
+                        <span *ngIf="
+                        messageForm.get('message')?.hasError('required') && 
+                        (messageForm.get('message')?.dirty || 
+                        messageForm.get('message')?.touched || isSubmitted)" class="error">
+                        Eingabe erforderlich
+                       </span>
                     </div>
 
                     <div>
-                        <button class="button" #sendButton>Senden</button>
+                        <button class="button" #sendButton [disabled]="canSendMail()">Senden</button>
                     </div>
                 </form>
 

@@ -43,7 +43,7 @@ const routes: Routes = [
     FooterComponent,
     LegalNoticeComponent,
     ProjectDaBubbleComponent,
-    MainpageComponent
+    MainpageComponent,
   ],
 
   imports: [

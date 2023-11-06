@@ -1,4 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -6,6 +7,18 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  messageForm = this.fb.group({
+    name: ['', Validators.required],
+    email: ['', Validators.required],
+    message: ['', Validators.required, Validators.email],
+  })
+
+  isSubmitted = false;
+
+
+
+  constructor(private fb: FormBuilder){}
+
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;
@@ -48,10 +61,16 @@ export class ContactComponent {
       // Bei einem Fehler kannst du hier eine Fehlerbehandlung durchführen
       console.error('Fehler beim Senden der Nachricht:', error);
     } finally {
-
-      
       // Aktiviere die Eingabefelder und den Senden-Button nach dem Senden oder bei Fehlern
       this.enableFormFields();
     }
+
+  }
+
+
+  canSendMail(){
+    return (
+      this.messageForm.invalid
+    );
   }
 }
