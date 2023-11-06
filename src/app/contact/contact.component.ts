@@ -59,11 +59,13 @@ export class ContactComponent {
       // Nachricht erfolgreich gesendet - Setze die Formularfelder zurück
       this.myForm.nativeElement.reset();
       this.successMessage = 'Deine E-Mail wurde erfolgreich gesendet!';
+      this.hideSuccessMessageAfterDelay();
       this.enableFormFields();
     } catch (error) {
       // Bei einem Fehler kannst du hier eine Fehlerbehandlung durchführen
       console.error('Fehler beim Senden der Nachricht:', error);
       this.successMessage = 'Deine E-Mail konnte leider nicht abgesendet werden, ich kümmere mich schnellstmöglich drum! :)';
+      this.hideSuccessMessageAfterDelay();
       this.myForm.nativeElement.reset();
       this.enableFormFields();
     } 
@@ -73,5 +75,11 @@ export class ContactComponent {
     return (
       this.messageForm.invalid
     );
+  }
+
+  hideSuccessMessageAfterDelay() {
+    setTimeout(() => {
+      this.successMessage = ''; // Verberge die Erfolgsmeldung
+    }, 5000); // 5000 Millisekunden entsprechen 5 Sekunden
   }
 }

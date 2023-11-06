@@ -145,7 +145,11 @@
 
 .button:disabled {
     border: 4px solid #5a5959;
-    cursor: not-allowed;
+    
+    &:hover {
+        cursor: not-allowed;
+        color:  #BBBBBB;
+    }
 }
 
 // ------------------------ ACCEPT DATA RULES IN CHECKBOX ------------------ //
