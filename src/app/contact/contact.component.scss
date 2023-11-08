@@ -80,6 +80,9 @@
 
             &:hover {
                 cursor: pointer;
+                border-left: 4px solid #BBBBBB;
+                border-right: 4px solid #BBBBBB;
+                border-top: 4px solid #BBBBBB;
             }
 
             &:focus {
@@ -130,8 +133,12 @@
 //-------- ERROR VALIDATION --------- //
 .invalid {
     border-bottom: 4px solid red !important;
-
-    &:focus{
+    &:hover{
+        border-left: 4px solid red !important;
+        border-right: 4px solid red !important;
+        border-top: 4px solid red !important;
+    }
+    &:focus {
         border-left: 4px solid red !important;
         border-right: 4px solid red !important;
         border-top: 4px solid red !important;
@@ -145,10 +152,10 @@
 
 .button:disabled {
     border: 4px solid #5a5959;
-    
+
     &:hover {
         cursor: not-allowed;
-        color:  #BBBBBB;
+        color: #BBBBBB;
     }
 }
 
@@ -182,7 +189,7 @@
 
 //-----------SUCCESS MESSAGE----------//
 
-.success-message{
+.success-message {
     color: white;
     font-size: 16px;
     font-family: Syne;
